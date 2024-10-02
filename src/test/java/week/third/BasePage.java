@@ -1,8 +1,7 @@
-package week.first;
+package week.third;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -24,23 +23,11 @@ public class BasePage {
 
         System.out.println("CURRENT URL IS -> " + currentURL);
 
-
-    }
-
-    public void closeCurrentTab(){
-
-        if (driver != null){
-
-            driver.close();
-        }
     }
 
     public void quitBrowser(){
 
-        if (driver != null){
-
-            driver.quit();
-        }
+        WebDriverFabric.closeBrowser(driver);
     }
 
     public void waitUntilPageTitleIsCorrect(long seconds, String title){

@@ -1,6 +1,5 @@
 package week.second;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
@@ -18,10 +17,8 @@ public class TestNG4HardAssertion {
         int sum = addition( firstNum, secondNum);
 
         assertTrue(sum < 25,
-                "Error! Sum is not less than 25!");
+                "Error! Sum is greater than or equal 25!");
 
-
-        System.out.println("The sum is: " + sum + "\n");
         System.out.println("\nFIRST TEST ENDS!");
 
     }
@@ -37,10 +34,10 @@ public class TestNG4HardAssertion {
         int sum = addition( firstNum, secondNum);
 
         assertFalse(sum < 25,
-                "Error! Sum is not greater than 25!");
+                "Error! Sum is not greater than or equal 25!");
 
 
-        System.out.println("The sum is: " + sum + "\n");
+
         System.out.println("\nSECOND TEST ENDS!");
 
 
@@ -67,7 +64,10 @@ public class TestNG4HardAssertion {
 
     private int addition(int firstNum, int secondNum){
 
-        return firstNum + secondNum;
+        int sum = firstNum + secondNum;
+        System.out.println("The sum is: " + sum + "\n");
+
+        return sum;
     }
 
 }

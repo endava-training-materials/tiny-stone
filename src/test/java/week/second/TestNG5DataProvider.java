@@ -19,10 +19,8 @@ public class TestNG5DataProvider {
         int sum = addition( firstNum, secondNum);
 
         assertTrue(sum < 25,
-                "Error! Sum is not less than 25!");
+                "Error! Sum is greater than or equal 25!");
 
-
-        System.out.println("The sum is: " + sum + "\n");
         System.out.println("\nFIRST TEST ENDS!");
 
     }
@@ -38,10 +36,8 @@ public class TestNG5DataProvider {
         int sum = addition( firstNum, secondNum);
 
         assertTrue(sum < 25,
-                "Error! Sum is not less than 25!");
+                "Error! Sum is greater than or equal 25!");
 
-
-        System.out.println("The sum is: " + sum + "\n");
         System.out.println("\nSECOND TEST ENDS!");
 
     }
@@ -57,21 +53,14 @@ public class TestNG5DataProvider {
         int sum = addition( firstNum, secondNum);
 
         assertTrue(sum < 25,
-                "Error! Sum is not less than 25!");
+                "Error! Sum is greater than or equal 25!");
 
-
-        System.out.println("The sum is: " + sum + "\n");
         System.out.println("\nTHIRD TEST ENDS!");
 
     }
 
 
-    private int addition(int firstNum, int secondNum){
-
-        return firstNum + secondNum;
-    }
-
-  //  @Test(dataProvider = "pairOfIntegers")
+    @Test(dataProvider = "pairOfIntegers")
     public void dataProviderTest(int firstNum, int secondNum) throws InterruptedException {
 
         System.out.println("\nDATA PROVIDER TEST STARTS!");
@@ -83,8 +72,6 @@ public class TestNG5DataProvider {
         assertTrue(sum < 25,
                 "Error! Sum is not less than 25!");
 
-
-        System.out.println("The sum is: " + sum + "\n");
         System.out.println("\nDATA PROVIDER TEST ENDS!");
 
     }
@@ -99,6 +86,14 @@ public class TestNG5DataProvider {
                 {45, -87},
                 {10, 25}
         };
+    }
+
+    private int addition(int firstNum, int secondNum){
+
+        int sum = firstNum + secondNum;
+        System.out.println("The sum is: " + sum + "\n");
+
+        return sum;
     }
 
 }

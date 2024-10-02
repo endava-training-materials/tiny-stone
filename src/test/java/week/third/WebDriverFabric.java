@@ -1,4 +1,4 @@
-package week.first;
+package week.third;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -37,7 +37,7 @@ public class WebDriverFabric {
         return driver;
     }
 
-    public static  void closeBrowser(WebDriver driver){
+    public static void closeBrowser(WebDriver driver){
 
         if (driver != null) {
 

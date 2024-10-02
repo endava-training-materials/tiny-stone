@@ -3,7 +3,7 @@ package week.second;
 
 import org.testng.annotations.*;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.fail;
 
 public class TestNG2BeforeAfterAnnotation { //extends TestNG2BeforeAfterExtendedClass {
 
