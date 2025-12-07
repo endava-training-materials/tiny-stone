@@ -1,6 +1,5 @@
 package week.first;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +17,6 @@ public class FirstWeekBasic {
     public void firstTest(){
 
 
-        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.saucedemo.com/");
@@ -39,7 +37,6 @@ public class FirstWeekBasic {
     @Test
     public void secondTest(){
 
-        WebDriverManager.firefoxdriver().setup();
         WebDriver driver = new FirefoxDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

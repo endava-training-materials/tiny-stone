@@ -12,8 +12,7 @@
     <properties>
         <java.version>11</java.version>
 
-        <selenium.version>4.25.0</selenium.version>
-        <webdrivermanager.version>5.8.0</webdrivermanager.version>
+        <selenium.version>4.38.0</selenium.version>
 
         <testng.version>7.10.2</testng.version>
 
@@ -37,14 +36,6 @@
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdrivermanager.version}</version>
-        </dependency>
-
 
     </dependencies>
 
